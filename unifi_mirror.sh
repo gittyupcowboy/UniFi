@@ -1,10 +1,12 @@
 #!/bin/bash
 # Tested on UniFi Switch PoE 16 (150W) running the 4.3.20.11298 Firmware.
 # excute with ssh <username@switchip> 'sh -s' < unifi_mirror.sh
-# mirrors to port 16 (see below).
+# mirrors LAN traffic to port 16 (see below).
 # I believe ports 17&18 are the SFP ports, however I do not have SFP to test with.
 # It may show an error for monitor session as it usually persists; you can ignore it. 
 # You may need to play with the sleep delay depending on your device. 
+# Adjust ports to match your device. e.g. 4 port; mirror 2/3 to 4 for LAN traffic
+# assuming port 1 is your uplink. 
 {
 echo "enable"
 echo "configure"
